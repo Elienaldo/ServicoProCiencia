@@ -4,7 +4,7 @@
     {
         //Propriedades
         public int ProjetoId { get; set; }
-        public string Tema { get; set; }
+        public string Titulo { get; set; }
         public string Resumo { get; set; }
         public string Autor { get; set; }
         public string Telefone { get; set; }
