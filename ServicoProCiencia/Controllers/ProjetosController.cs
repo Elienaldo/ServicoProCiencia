@@ -22,7 +22,9 @@ namespace ServicoProCiencia.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Projeto>>> GetProjetos()
         {
-            return await _context.Projeto.ToListAsync();
+            return await _context.Projeto
+                .Include(p => p.Area)
+                .Include(p => p.SubArea).ToListAsync();
         }
 
         // GET: api/Projetos/5
