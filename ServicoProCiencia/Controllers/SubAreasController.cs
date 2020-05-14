@@ -22,7 +22,7 @@ namespace ServicoProCiencia.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SubArea>>> GetSubAreas()
         {
-            return await _context.SubArea.Include(p => p.Area).ToListAsync();
+            return await _context.SubArea.Include(s => s.Area).ToListAsync();
         }
 
         // GET: api/SubAreas/5
